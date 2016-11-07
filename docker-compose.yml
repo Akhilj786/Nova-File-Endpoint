@@ -1,0 +1,9 @@
+postgres:  
+  image: postgres
+  ports:
+    - "5432:5432"
+  environment:
+    - POSTGRES_USER=novaserver
+    - POSTGRES_PASSWORD=novaserver123
+  volumes:
+    - /var/lib/postgresql/data

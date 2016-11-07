@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page. This gives all the data in the Database.
+GET     /                           	@controllers.Application.index
+
+# MultipartFormData 
+GET     /files                      	@controllers.UpFiles.index
+POST 	/upload							@controllers.Application.Phase1
+POST    /                          		@controllers.Application.Phase2
+
+GET     /data/:id                        @controllers.Application.show(id: Int)
+PUT     /data/:id                        @controllers.Application.update(id: Int)
+DELETE  /data/:id                        @controllers.Application.delete(id: Int)
